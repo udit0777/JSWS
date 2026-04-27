@@ -2,7 +2,7 @@ import React, { ButtonHTMLAttributes } from 'react';
 import { LucideIcon } from 'lucide-react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'outline';
+  variant?: 'primary' | 'outline' | 'white';
   size?: 'default' | 'lg';
   icon?: LucideIcon;
 }
@@ -16,7 +16,12 @@ export function Button({
   ...props 
 }: ButtonProps) {
   const baseClass = 'btn';
-  const variantClass = variant === 'primary' ? 'btn-primary' : 'btn-outline';
+  const variantClasses = {
+    primary: 'btn-primary',
+    outline: 'btn-outline',
+    white: 'btn-white'
+  };
+  const variantClass = variantClasses[variant];
   const sizeClass = size === 'lg' ? 'btn-lg' : '';
   
   return (
@@ -26,3 +31,4 @@ export function Button({
     </button>
   );
 }
+

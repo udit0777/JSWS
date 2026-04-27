@@ -7,9 +7,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Hope Foundation | NGO Donation",
-  description: "Join us in making a difference. Donate today to support our cause.",
+  title: "Jan Swabhiman | Ek kadam, behtar kal ki aur",
+  description: "Hum samaj ke zarooratmand logon ke liye shiksha, swasthya, ration aur rojgar ke kshetra me kaam karte hain.",
 };
+
 
 export default function RootLayout({
   children,
